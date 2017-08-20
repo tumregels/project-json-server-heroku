@@ -4,6 +4,8 @@ const server = jsonServer.create()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
 
+var port = process.env.PORT || 3000;
+
 var basicAuth = require('express-basic-auth')
  
 server.use(basicAuth({
@@ -20,6 +22,6 @@ function getUnauthorizedResponse(req) {
 
 server.use(middlewares)
 server.use(router)
-server.listen(3000, () => {
+server.listen(port, () => {
   console.log('JSON Server is running')
 })
