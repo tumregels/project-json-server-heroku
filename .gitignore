@@ -1,0 +1,5 @@
+heroku-cli-v6.13.18-a444c52-linux-x64/
+node_modules/
+*.log
+.ipynb_checkpoints/
+*.ipynb
